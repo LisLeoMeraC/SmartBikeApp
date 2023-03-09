@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "822837410292",
+    "firebase_url": "https://smart-byke-v2-default-rtdb.firebaseio.com",
+    "project_id": "smart-byke-v2",
+    "storage_bucket": "smart-byke-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822837410292:android:421a876b22f120638861a1",
+        "android_client_info": {
+          "package_name": "com.dist.smartbike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822837410292-eb8a46s7blukjcioq9tb555lr3o156ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsERPT-hcI6PlodibCs3Qr4vOykcJyGlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822837410292-eb8a46s7blukjcioq9tb555lr3o156ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

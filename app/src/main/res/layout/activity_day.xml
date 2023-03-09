@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_day">
+
+    <LinearLayout
+        android:id="@+id/linearParte1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:layout_width="413dp"
+                android:layout_height="88dp"
+                android:fontFamily="@font/san_francisco"
+                android:gravity="center|center_horizontal"
+                android:text="My Day"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearParte2"
+        android:layout_width="match_parent"
+        android:layout_below="@id/linearParte1"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/san_francisco"
+            android:gravity="center|center_horizontal"
+            android:text="Hola Lister"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/welcome" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearParte3"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_below="@id/linearParte2"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="422dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/san_francisco"
+            android:gravity="center|center_horizontal"
+            android:text="Recorrido"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:layout_width="410dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/san_francisco"
+            android:gravity="center|center_horizontal"
+            android:text="2 km"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearParte4"
+        android:layout_width="379dp"
+        android:layout_height="326dp"
+        android:layout_below="@id/linearParte3"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/velocimetro"
+            android:fontFamily="@font/san_francisco"
+            android:text="  Velocidad Max: 10m/s"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/velocimetro"
+            android:fontFamily="@font/san_francisco"
+            android:text="  Velocidad Min: 5m/s"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/altitud"
+            android:fontFamily="@font/san_francisco"
+            android:text="  Altitud: 1294"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tempe"
+            android:fontFamily="@font/san_francisco"
+            android:text="  Temperatura: 24ºC"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tiempo"
+            android:fontFamily="@font/san_francisco"
+            android:text="  Tiempo estimado: 15 min"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

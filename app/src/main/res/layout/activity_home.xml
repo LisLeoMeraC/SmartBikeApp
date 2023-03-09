@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="213dp"
+        android:background="@drawable/blue_bg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <LinearLayout
+
+        android:id="@+id/linearParte4"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/txtOpcionDay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="158dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="500px"
+            android:drawableBottom="@drawable/bicicleta"
+            android:text="My day"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="300dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="158dp"
+            android:layout_height="110dp"
+            android:drawableBottom="@drawable/estad"
+            android:text="Statistics"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="300dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearParte5"
+        android:layout_width="350dp"
+        android:layout_below="@+id/linearParte4"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="158dp"
+            android:layout_height="110dp"
+            android:drawableBottom="@drawable/historiall"
+            android:text="History"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="443dp" />
+
+
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="158dp"
+            android:layout_height="110dp"
+            android:drawableBottom="@drawable/ajustes"
+            android:text="Configuratión"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="443dp" />
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="413dp"
+        android:layout_height="171dp"
+        android:fontFamily="@font/san_francisco"
+        android:gravity="center|center_horizontal"
+        android:text="Main Menu"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+</RelativeLayout>
