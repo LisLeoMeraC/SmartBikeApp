@@ -34,10 +34,11 @@
     <LinearLayout
         android:id="@+id/linearParte2"
         android:layout_width="match_parent"
-        android:layout_below="@id/linearParte1"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+        android:layout_below="@id/linearParte1">
 
         <TextView
+            android:id="@+id/lblSaludo"
             android:layout_width="215dp"
             android:layout_height="100dp"
             android:fontFamily="@font/san_francisco"
@@ -77,6 +78,7 @@
             tools:layout_editor_absoluteY="16dp" />
 
         <TextView
+            android:id="@+id/lblRecorrido"
             android:layout_width="410dp"
             android:layout_height="80dp"
             android:fontFamily="@font/san_francisco"
@@ -94,11 +96,12 @@
         android:layout_width="379dp"
         android:layout_height="326dp"
         android:layout_below="@id/linearParte3"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/lblVelocidadMax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/velocimetro"
@@ -110,6 +113,7 @@
             tools:layout_editor_absoluteY="16dp" />
 
         <TextView
+            android:id="@+id/lblVelocidadMin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/velocimetro"
@@ -121,6 +125,7 @@
             tools:layout_editor_absoluteY="16dp" />
 
         <TextView
+            android:id="@+id/lblAltitud"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/altitud"
@@ -133,6 +138,7 @@
 
 
         <TextView
+            android:id="@+id/lblTemperatura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/tempe"
@@ -145,6 +151,7 @@
 
 
         <TextView
+            android:id="@+id/lblTiempo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/tiempo"

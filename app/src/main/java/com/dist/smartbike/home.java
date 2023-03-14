@@ -24,11 +24,11 @@ public class home extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Credentials", MODE_PRIVATE);
 
         IrAFormularioDay.setOnClickListener(view -> {
-            // Código para llamar al formulario deseado
-//            Intent intent = new Intent(home.this, activity_day.class);
-//            startActivity(intent);
-            String code_session = sharedPreferences.getString("code_session", "");
-            Toast.makeText(this, code_session, Toast.LENGTH_SHORT).show();
+//             Código para llamar al formulario deseado
+            Intent intent = new Intent(home.this, activity_day.class);
+            startActivity(intent);
+//            String code_session = sharedPreferences.getString("code_session", "");
+//            Toast.makeText(this, code_session, Toast.LENGTH_SHORT).show();
         });
 
         TextView IrAInicio = findViewById(textView4);

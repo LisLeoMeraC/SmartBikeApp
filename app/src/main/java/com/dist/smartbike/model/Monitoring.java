@@ -3,20 +3,21 @@ package com.dist.smartbike.model;
 import java.time.LocalDateTime;
 
 public class Monitoring {
-    private Integer id;
     private Integer speed_max;
     private Integer speed_min;
     private Integer altitude;
     private Double temperature;
     private Integer travel_time;
-    private LocalDateTime dateTime;
+    private Double travel;
 
-    public Integer getId() {
-        return id;
+    private User user;
+
+    public User getUser() {
+        return user;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Integer getSpeed_max() {
@@ -59,11 +60,11 @@ public class Monitoring {
         this.travel_time = travel_time;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public Double getTravel() {
+        return travel;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setTravel(Double travel) {
+        this.travel = travel;
     }
 }
