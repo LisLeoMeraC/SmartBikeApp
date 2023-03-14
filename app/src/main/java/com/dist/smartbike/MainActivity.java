@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             client.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                    System.out.println(e);
                     MainActivity.this.runOnUiThread(() -> Toast.makeText(MainActivity.this, "Error al entrar al servidor", Toast.LENGTH_SHORT).show());
                 }
 
