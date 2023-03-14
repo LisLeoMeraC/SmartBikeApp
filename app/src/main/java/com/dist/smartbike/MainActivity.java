@@ -3,7 +3,9 @@ package com.dist.smartbike;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -36,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Credentials", MODE_PRIVATE);
+        if (sharedPreferences.contains("code_session")){
+            Intent intent = new Intent(MainActivity.this, home.class);
+            startActivity(intent);
+            finish();
+        }
 
         btnLogin = findViewById(R.id.btnIniciarSesion);
         btnRegister = findViewById(R.id.txtNuevoUsuario);
@@ -73,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
                         Gson gson = new Gson();
                         User user = gson.fromJson(response.body().string(), User.class);
                         user.setCode_session(finalCredentials);
+                        // Guardar el inicio de sesión en memoria
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("code_session", user.getCode_session());
+                        editor.commit();
+
                         Intent intent = new Intent(MainActivity.this, home.class);
                         startActivity(intent);
                         finish();
