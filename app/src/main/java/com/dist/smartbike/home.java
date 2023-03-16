@@ -1,5 +1,6 @@
 package com.dist.smartbike;
 
+import static com.dist.smartbike.R.id.cerrarSesion;
 import static com.dist.smartbike.R.id.textView4;
 import static com.dist.smartbike.R.id.txtOpcionDay;
 
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class home extends AppCompatActivity {
 
@@ -31,9 +34,12 @@ public class home extends AppCompatActivity {
 //            Toast.makeText(this, code_session, Toast.LENGTH_SHORT).show();
         });
 
-        TextView IrAInicio = findViewById(textView4);
 
-        IrAInicio.setOnClickListener(view -> {
+
+
+
+        Button irAIncio= findViewById(cerrarSesion);
+        irAIncio.setOnClickListener(view -> {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.remove("code_session");
             editor.apply();

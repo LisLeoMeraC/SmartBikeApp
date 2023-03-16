@@ -57,7 +57,7 @@ public class activity_day extends AppCompatActivity {
         @Override
         public void run() {
             try {
-                String url = "http://192.168.0.105:8080/monitoring/play";
+                String url = "http://192.168.1.4:8080/monitoring/play";
                 String code_session = sharedPreferences.getString("code_session", "");
                 Request request = new Request.Builder().url(url).addHeader("Authorization", "Basic " + code_session).build();
                 client.newCall(request).enqueue(new Callback() {
@@ -72,7 +72,7 @@ public class activity_day extends AppCompatActivity {
                             Gson gson = new Gson();
                             Monitoring monitoring = gson.fromJson(response.body().string(), Monitoring.class);
                             activity_day.this.runOnUiThread(()->{
-                                lblSaludo.setText(" Hola " + monitoring.getUser().getNames());
+                                lblSaludo.setText(" Hi "  + monitoring.getUser().getNames()+"!!!");
                                 lblRecorrido.setText(" " + monitoring.getTravel() + "Km");
                                 lblVelocidadMax.setText(" Velocidad Max: " + monitoring.getSpeed_max() + "m/s");
                                 lblVelocidadMin.setText(" Velocidad Min: " + monitoring.getSpeed_min() + "m/s");

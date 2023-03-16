@@ -43,13 +43,15 @@
 
     <LinearLayout
         android:id="@+id/linearParte3"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearParte2"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtInputUsuario"
@@ -67,6 +69,7 @@
                 android:inputType="textEmailAddress"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtInputPassword"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -139,5 +142,8 @@
             android:text="I forgot my password"/>
 
     </LinearLayout>
+
+
+
 
 </RelativeLayout>
