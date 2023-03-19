@@ -23,7 +23,6 @@ import java.io.UnsupportedEncodingException;
 public class activity_logueoqr extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
-    private TextView cod;
     private ImageView imgqr;
     Bitmap bitmap = null;
 
@@ -33,26 +32,14 @@ public class activity_logueoqr extends AppCompatActivity {
         setContentView(R.layout.activity_logueoqr);
         sharedPreferences = getSharedPreferences("Credentials", MODE_PRIVATE);
         imgqr=findViewById(R.id.imgqr);
-        cod=findViewById(R.id.probando);
-        try {
-            generateQr();
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        }
-
+        //Llamo el método
+        generateQr();
     }
-    public void generateQr () throws UnsupportedEncodingException {
+
+    //Método para generar el codigo Qr
+    public void generateQr (){
         String code_session = sharedPreferences.getString("code_session", "");
-
-
-
-        cod.setText(code_session);
-
         MainActivity activity= new MainActivity();
-
-       // String texto = "meraleonardo99@gmail.com:12345";
-      //  String Codbase64QR = activity.Base64Encoder(texto);
-
         try {
             BitMatrix bitMatrix = new QRCodeWriter().encode(code_session, BarcodeFormat.QR_CODE, 900, 800);
             int width = bitMatrix.getWidth();
