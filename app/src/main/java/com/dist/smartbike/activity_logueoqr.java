@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,10 +18,12 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+import java.io.UnsupportedEncodingException;
+
 public class activity_logueoqr extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
-    private TextView codigo;
+    private TextView cod;
     private ImageView imgqr;
     Bitmap bitmap = null;
 
@@ -30,13 +33,28 @@ public class activity_logueoqr extends AppCompatActivity {
         setContentView(R.layout.activity_logueoqr);
         sharedPreferences = getSharedPreferences("Credentials", MODE_PRIVATE);
         imgqr=findViewById(R.id.imgqr);
-        generateQr();
+        cod=findViewById(R.id.probando);
+        try {
+            generateQr();
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
 
     }
-    public void generateQr (){
+    public void generateQr () throws UnsupportedEncodingException {
         String code_session = sharedPreferences.getString("code_session", "");
+
+
+
+        cod.setText(code_session);
+
+        MainActivity activity= new MainActivity();
+
+       // String texto = "meraleonardo99@gmail.com:12345";
+      //  String Codbase64QR = activity.Base64Encoder(texto);
+
         try {
-            BitMatrix bitMatrix = new QRCodeWriter().encode(code_session, BarcodeFormat.QR_CODE, 512, 512);
+            BitMatrix bitMatrix = new QRCodeWriter().encode(code_session, BarcodeFormat.QR_CODE, 900, 800);
             int width = bitMatrix.getWidth();
             int height = bitMatrix.getHeight();
             bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);

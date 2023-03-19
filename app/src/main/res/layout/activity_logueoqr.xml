@@ -13,5 +13,11 @@
         android:layout_height="match_parent"
         app:srcCompat="@drawable/cierre" />
 
+    <TextView
+        android:id="@+id/probando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 
 </RelativeLayout>
