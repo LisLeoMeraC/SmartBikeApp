@@ -67,8 +67,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="158dp"
             android:layout_height="110dp"
-            android:drawableBottom="@drawable/historiall"
-            android:text="History"
+            android:drawableBottom="@drawable/contacto"
+            android:text="Emergency Contact"
             android:textAlignment="center"
             android:textColor="@color/purple_500"
             android:textSize="20sp"
@@ -76,14 +76,13 @@
             tools:layout_editor_absoluteY="443dp" />
 
 
-
         <TextView
             android:id="@+id/textView4"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="158dp"
             android:layout_height="110dp"
-            android:drawableBottom="@drawable/ajustes"
-            android:text="Configuratión"
+            android:drawableBottom="@drawable/datos"
+            android:text="My profile"
             android:textAlignment="center"
             android:textColor="@color/purple_500"
             android:textSize="20sp"

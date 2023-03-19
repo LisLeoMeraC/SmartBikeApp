@@ -30,6 +30,7 @@ public class activity_day extends AppCompatActivity {
     private TextView lblTemperatura;
     private TextView lblTiempo;
 
+    private TextView lblTiempo1;
     private OkHttpClient client;
     private Handler handler;
 
@@ -53,6 +54,8 @@ public class activity_day extends AppCompatActivity {
         handler.postDelayed(runnable, 1000);
     }
 
+
+
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -74,11 +77,12 @@ public class activity_day extends AppCompatActivity {
                             activity_day.this.runOnUiThread(()->{
                                 lblSaludo.setText(" Hi "  + monitoring.getUser().getNames()+"!!!");
                                 lblRecorrido.setText(" " + monitoring.getTravel() + "Km");
-                                lblVelocidadMax.setText(" Velocidad Max: " + monitoring.getSpeed_max() + "m/s");
-                                lblVelocidadMin.setText(" Velocidad Min: " + monitoring.getSpeed_min() + "m/s");
-                                lblAltitud.setText(" Altitud: " + monitoring.getAltitude());
-                                lblTiempo.setText(" Temperatura: " + monitoring.getTemperature() + "°C");
-                                lblTemperatura.setText(" Tiempo estimado: " + monitoring.getTravel_time());
+                                lblVelocidadMax.setText(" Speed Max: " + monitoring.getSpeed_max() + "m/s");
+                                lblVelocidadMin.setText(" Speed Min: " + monitoring.getSpeed_min() + "m/s");
+                                lblAltitud.setText(" Altitude: " + monitoring.getAltitude()+"m");
+                                lblTiempo.setText(" Temperature: " + monitoring.getTemperature() + "°C");
+                                lblTemperatura.setText(" Time: " + monitoring.getTravel_time()+"min");
+
                             });
                         }
                     }

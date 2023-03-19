@@ -41,6 +41,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
     // dependence of Gson
     implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation 'com.google.zxing:core:3.3.3'
 }
 
 

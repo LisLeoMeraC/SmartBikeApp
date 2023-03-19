@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/san_francisco"
             android:gravity="center|center_horizontal"
-            android:text="Recorrido"
+            android:text="Tour"
             android:textSize="40sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
@@ -146,6 +146,17 @@
 
         <TextView
             android:id="@+id/lblTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tiempo"
+            android:fontFamily="@font/san_francisco"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/lblTiempo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/tiempo"

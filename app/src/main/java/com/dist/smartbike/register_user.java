@@ -47,7 +47,7 @@ public class register_user extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
 
         client = new OkHttpClient();
-        String url = "http://192.168.0.105:8080/users/register";
+        String url = "http://192.168.1.4:8080/users/register";
 
         btnRegister.setOnClickListener(view -> {
             /*
